@@ -1,0 +1,69 @@
+body {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🔹 Dividing the page into 3 equal sections with different background colors */
+.section1 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
+    background-color: black;
+}
+
+.section2 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
+    background-color: white;
+}
+
+.section3 {
+    position: absolute;
+    top: 0;
+    width: 33.33%;
+    height: 100vh;
+    border-right: 2px solid white;
+    background-color: black;
+}
+
+.section:last-child {
+    border-right: none; /* Remove last border */
+}
+
+/* 🔹 Marquee Text Style */
+.marquee {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    width: max-content;
+    margin-top: 100px;
+    border: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Initial color */
+    animation: bounce 5s infinite alternate ease-in-out; /* 🔥 Smooth bouncing animation */
+    transition: color 0.5s ease-in-out; /* 🔥 Smooth color transition */
+}
+
+/* 🔹 Logo Styling */
+img {
+    height: 350px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -270px;
+    border-radius: 250px;
+    box-shadow: 2px 2px 5px 5px rgba(197, 170, 14, 0.719);
+}
+
+/* 🔥 Bouncing Animation - Moves the text left and right */
+@keyframes bounce {
+    0% { left: 8%; }
+    50% { left: 57%; transform: translateX(-50%) translateX(-50%); }
+    100% { left: 100%; transform: translateX(-85%) translateX(-75%); }
+}
